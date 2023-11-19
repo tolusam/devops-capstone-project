@@ -77,7 +77,6 @@ def read_accounts(account_id):
     # use the Account.find() method to find the account
     account =  Account.find(account_id)
     # abort() with a status.HTTP_404_NOT_FOUND if it cannot be found
-    # print(id, account)
     if not account:
         message = f"No account with [{id}] was found"
         return abort(status.HTTP_404_NOT_FOUND, message)
